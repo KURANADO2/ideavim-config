@@ -84,7 +84,8 @@ map s <nop>
 nnoremap E gT
 nnoremap R gt
 nnoremap W 1gt
-nnoremap T $gt
+" nnoremap T $gt
+nnoremap T 1gtgT
 
 " Cancel search highlight
 map <LEADER><CR> :nohlsearch<CR>
@@ -148,7 +149,8 @@ map <leader>o :action FileStructurePopup<CR>
 
 " Git
 " Equal ⌥ + F1
-map te :action Git.Branches<CR>
+map ge :action Git.Branches<CR>
+map gh :action Vcs.ShowTabbedFileHistory<CR>
 
 " Bookmarks
 " Bookmark list Equal ⇧ + F11
