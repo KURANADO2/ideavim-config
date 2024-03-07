@@ -110,10 +110,10 @@ let context_aware=1
 set multiple-cursors
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
-nmap g<C-n> <Plug>NextOccurrence
-xmap g<C-n> <Plug>NextOccurrence
-nmap <C-A-x> <Plug>SkipOccurrence
-xmap <C-A-x> <Plug>SkipOccurrence
+nmap <C-a> <Plug>AllWholeOccurrences
+xmap <C-a> <Plug>AllWholeOccurrences
+nmap <C-x> <Plug>SkipOccurrence
+xmap <C-x> <Plug>SkipOccurrence
 nmap <C-p> <Plug>RemoveOccurrence
 xmap <C-p> <Plug>RemoveOccurrence
 
@@ -125,8 +125,45 @@ map <Leader>w <Plug>(easymotion-bd-w)
 " Search for full-screen matches
 map <Leader>f <Plug>(easymotion-s)
 
-" Idea action
-nnoremap tt :action ActivateProjectToolWindow<CR>
-nnoremap tp :action ManageRecentProjects<CR>
-nnoremap te :action Git.Branches<CR>
-nnoremap Q :action CloseProject<CR>
+" IDEA action
+" Window
+map tt :action ActivateProjectToolWindow<CR>
+map ss :action SelectInProjectView<CR>
+
+" Project
+map tp :action ManageRecentProjects<CR>
+
+" Coding
+map <leader>r :action RenameElement<CR>
+" map sn :action GotoNextError<CR>
+" map sp :action GotoPreviousError<CR>
+" Equal ⌘ + ⌥ + Left
+map <C-o> :action Back<CR>
+" Equal ⌘ + ⌥ + Right
+map <C-i> :action Forward<CR>
+map <leader>e :action ShowErrorDescription<CR>
+map <leader>a :action Annotate<CR>
+" File outline
+map <leader>o :action FileStructurePopup<CR>
+
+" Git
+" Equal ⌥ + F1
+map te :action Git.Branches<CR>
+
+" Bookmarks
+" Bookmark list Equal ⇧ + F11
+map ml :action ShowBookmarks<CR>
+map me :action GotoNextBookmark<CR>
+map mb :action GotoPreviousBookmark<CR>
+map mm :action ToggleBookmark<CR>
+
+" Debug
+map <leader>d :action Debug<CR>
+" Equal ⌘ + F8
+map <leader>b :action ToggleLineBreakpoint<CR>
+
+" Stop
+map <leader>s :action Stop<CR>
+
+" Close project
+map Q :action CloseProject<CR>
