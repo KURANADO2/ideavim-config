@@ -3,7 +3,7 @@ let mapleader=" "
 
 " Basic Settings
 " Fixed the problem that p paste cannot import class automatically, https://youtrack.jetbrains.com/issue/VIM-25/VIM-code-paste-should-be-smarter
-set clipboard+=ideaput
+set clipboard+=ideaput,unnamed
 " Keep the number of rows
 set scrolloff=5
 " Enable relative number
