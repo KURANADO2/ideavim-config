@@ -10,6 +10,8 @@ set scrolloff=5
 set relativenumber
 " Disable relative number
 "set norelativenumber
+" Show line number
+set number
 " Ignore case when search
 set ignorecase
 " Enable smart case when search
@@ -167,7 +169,7 @@ map mb <Action>(GotoPreviousBookmark)
 map mm <Action>(ToggleBookmark)
 
 " Debug
-map <leader>d <Action>(Debug)
+" map <leader>d <Action>(RunDashboard.Debug)
 " Equal ⌘ + F8
 map <leader>b <Action>(ToggleLineBreakpoint)
 
@@ -179,3 +181,4 @@ map <leader>z <Action>(ToggleZenMode)
 
 " Close project
 map Q <Action>(CloseProject)
+
