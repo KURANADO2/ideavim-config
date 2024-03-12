@@ -160,6 +160,7 @@ map gd <Action>(GotoDeclaration)
 " Equal ⌥ + F1
 map ge <Action>(Git.Branches)
 map gh <Action>(Vcs.ShowTabbedFileHistory)
+vmap gh <Action>(Vcs.ShowHistoryForBlock)
 
 " Bookmarks
 " Bookmark list Equal ⇧ + F11
