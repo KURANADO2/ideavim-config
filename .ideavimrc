@@ -47,6 +47,13 @@ map <LEADER>l <C-w>l
 " Loot with splits
 map <LEADER>w <C-w>w
 
+" Tab switch
+nnoremap E gT
+nnoremap R gt
+nnoremap W 1gt
+" nnoremap T $gt
+nnoremap T 1gtgT
+
 " Scroll
 " Move up/down the view port without moving the cursor
 noremap J 5<C-e>
@@ -54,6 +61,12 @@ noremap K 5<C-y>
 " Move left/right the view port without moving the cursor
 noremap H 20zh
 noremap L 20zl
+
+" Toggle case
+map ` ~
+
+" redo
+noremap U <C-r>
 
 " Copy and paste
 " Copy selection area to system clipboard
@@ -70,6 +83,12 @@ noremap vie ggVG
 nnoremap <C-v> V
 nnoremap V <C-v>
 
+" Display the search results in the middle of the screen
+noremap * *zz
+noremap # #zz
+noremap n nzz
+noremap N Nzz
+
 " Command mode cursor movement
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
@@ -78,24 +97,14 @@ cnoremap <C-n> <Down>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 
-" Toggle case
-map ` ~
+" Cancel search highlight
+map <LEADER><CR> :nohlsearch<CR>
 
-" redo
-noremap U <C-r>
+" Find and replace
+noremap \s :%s///g<left><left><left>
 
 " Set s no any action
 map s <nop>
-
-" Tab switch
-nnoremap E gT
-nnoremap R gt
-nnoremap W 1gt
-" nnoremap T $gt
-nnoremap T 1gtgT
-
-" Cancel search highlight
-map <LEADER><CR> :nohlsearch<CR>
 
 " Save
 map S :w<CR>
@@ -170,7 +179,7 @@ map mb <Action>(GotoPreviousBookmark)
 map mm <Action>(ToggleBookmark)
 
 " Debug
-" map <leader>d <Action>(RunDashboard.Debug)
+map <leader>d <Action>(RunDashboard.Debug)
 " Equal ⌘ + F8
 map <leader>b <Action>(ToggleLineBreakpoint)
 
